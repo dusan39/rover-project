@@ -1,7 +1,14 @@
-# Vue 3 + Vite
+# Rover - Vue 3
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+Questo progetto è stato realizzato interamente con Vue 3(Composition API).
 
-## Recommended IDE Setup
+## Utilizzo
 
-- [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+Il progetto si basa sulle coordinate x - y per il posizionamento del rover invece per quanto riguarda i comandi per muoverlo utilizza Nord(n) - Sud(s) - Est(e) - Ovest(o), tra le coordinate e i comandi ho deciso di utilizzare come separatore "-" quindi un esempio di posizione del rover può essere = 2-1. Invece per i comandi questa può essere una sequenza da seguire come esempio = n-n-e-s-s.
+
+- Per poter iniziare bisogna inserire la posizione del rover prima la x da 0 a 3 e poi la y sempre da 0 a 3.
+- Il secondo passo è inserire i comandi per far muovere il rover, si possono inserire un massimo di 5 comandi.
+
+## Link del deploy
+
+https://rover-vue.netlify.app/
