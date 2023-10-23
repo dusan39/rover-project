@@ -18,8 +18,8 @@ import { ref, computed } from 'vue';
 
   let roverX = ref(0); 
   let roverY = ref(0);
-  const obstacleX = ref(3);
-  const obstacleY = ref(3);
+  const obstacleX = ref(2);
+  const obstacleY = ref(2);
 
   const obstacle = (x, y) => {
     return x === obstacleX.value && y === obstacleY.value
@@ -107,16 +107,16 @@ import { ref, computed } from 'vue';
         <div class="mb-10 flex justify-center flex-col">
           <input class="w-60 mx-auto mb-5" maxlength="3" v-model="roverPosition" placeholder="Enter rover's position" />
           <h3 class="mb-5 text-white">Example = 1-1</h3>
-          <button class="w-50 mx-auto border border-gray-100 text-xl px-10 py-5 rounded-2xl text-white hover:bg-sky-700 transition ease-in-out delay-50 cursor-pointer" @click="addPosition" :disabled="roverPosition.trim() === '' || disabled === true">Set position</button>
+          <button class="w-50 mx-auto border border-gray-100 text-xl px-10 py-5 rounded-2xl text-white hover:bg-orange-600 transition ease-in-out delay-50 cursor-pointer" @click="addPosition" :disabled="roverPosition.trim() === '' || disabled === true">Set position</button>
         </div>
 
         <div class="mb-10 flex justify-center flex-col">
-          <input class="w-60 mx-auto mb-5" maxlength="9" v-model="roverCommands" placeholder="Enter rover's comands" />
+          <input class="w-60 mx-auto mb-5" maxlength="11" v-model="roverCommands" placeholder="Enter rover's comands" />
           <h3 class="mb-5 text-white">Example = n-e-s-o-o</h3>
-          <button class="w-50 mx-auto border border-gray-100 text-xl px-10 py-5 rounded-2xl text-white hover:bg-sky-700 transition ease-in-out delay-50 cursor-pointer" @click="addCommand" :disabled="roverCommands.trim() === '' || disabled === true">Submit comands</button>
+          <button class="w-50 mx-auto border border-gray-100 text-xl px-10 py-5 rounded-2xl text-white hover:bg-orange-600 transition ease-in-out delay-50 cursor-pointer" @click="addCommand" :disabled="roverCommands.trim() === '' || disabled === true">Submit comands</button>
         </div>
       </div>
-
+      
       <div class="flex flex-col items-center mb-8">
       <div v-for="(row, x) in board" class="flex">
         <div v-for="(cell, y) in row" 
